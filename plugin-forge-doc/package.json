@@ -1,0 +1,15 @@
+{
+  "name": "plugin-forge-doc",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Plugin Forge 多平台插件开发模板的 VitePress 文档站点",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

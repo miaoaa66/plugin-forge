@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Plugin Forge",
+  "version": "0.1.0",
+  "description": "Plugin Forge 多平台插件开发模板：一套 Web 内核，四种形态交付。",
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/16.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    },
+    "default_title": "Plugin Forge"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "plugin-forge-vscode",
+  "displayName": "Plugin Forge",
+  "description": "Plugin Forge：多平台插件开发模板的 VSCode 形态，一套 Web 内核嵌入编辑器，默认显示在底部面板，可拖到主侧边栏或辅助侧边栏。",
+  "version": "0.1.0",
+  "publisher": "miaoaa",
+  "license": "MIT",
+  "icon": "media/logo.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "main": "./dist/extension.js",
+  "activationEvents": ["onView:plugin-forge.mainView"],
+  "contributes": {
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "plugin-forge-container",
+          "title": "Plugin Forge",
+          "icon": "media/logo.png"
+        }
+      ]
+    },
+    "views": {
+      "plugin-forge-container": [
+        {
+          "type": "webview",
+          "id": "plugin-forge.mainView",
+          "name": "Plugin Forge"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "plugin-forge.open",
+        "title": "Plugin Forge: 打开",
+        "icon": "$(tools)"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node esbuild.js",
+    "sync": "node scripts/sync-webview.js",
+    "vscode:prepublish": "npm run sync && npm run build",
+    "package": "npm run vscode:prepublish && vsce package --allow-missing-repository"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.2.0",
+    "esbuild": "^0.25.0"
+  }
+}

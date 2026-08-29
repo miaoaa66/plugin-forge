@@ -1,0 +1,9 @@
+{
+  "name": "plugin-forge-utools",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plugin Forge uTools 插件：搜索框唤起，窗口内打开多平台插件内核",
+  "scripts": {
+    "package": "node scripts/package.js"
+  }
+}

@@ -1,0 +1,97 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+:root {
+  --sidebar-bg: #001529;
+  --sidebar-text: rgba(255, 255, 255, 0.65);
+  --sidebar-text-active: #ffffff;
+  --sidebar-logo-text: #ffffff;
+  --sidebar-logo-border: rgba(255, 255, 255, 0.1);
+  --menu-active-bg: #1890ff;
+  --content-bg: #f5f7fa;
+  --content-text: #303133;
+  --content-text-secondary: #606266;
+  --toggle-bg: rgba(255, 255, 255, 0.1);
+  --toggle-bg-hover: rgba(255, 255, 255, 0.2);
+  --stage-bg: #f5f7fa;
+  --panel-bg: #ffffff;
+  /* 透明图片棋盘格 */
+  --checker-color: rgba(0, 0, 0, 0.08);
+  /* 滚动条 */
+  --scrollbar-thumb: rgba(144, 147, 153, 0.4);
+  --scrollbar-thumb-hover: rgba(144, 147, 153, 0.65);
+  --scrollbar-thumb-active: rgba(144, 147, 153, 0.8);
+  --scrollbar-track: transparent;
+}
+
+html.dark {
+  --sidebar-bg: #141414;
+  --sidebar-text: rgba(255, 255, 255, 0.65);
+  --sidebar-text-active: #ffffff;
+  --sidebar-logo-text: #ffffff;
+  --sidebar-logo-border: rgba(255, 255, 255, 0.1);
+  --menu-active-bg: #1890ff;
+  --content-bg: #1d1e1f;
+  --content-text: #e5eaf3;
+  --content-text-secondary: #cfd3dc;
+  --toggle-bg: rgba(255, 255, 255, 0.1);
+  --toggle-bg-hover: rgba(255, 255, 255, 0.2);
+  --stage-bg: #2a2b2c;
+  --panel-bg: #262727;
+  /* 透明图片棋盘格 */
+  --checker-color: rgba(255, 255, 255, 0.12);
+  /* 滚动条 */
+  --scrollbar-thumb: rgba(255, 255, 255, 0.25);
+  --scrollbar-thumb-hover: rgba(255, 255, 255, 0.4);
+  --scrollbar-thumb-active: rgba(255, 255, 255, 0.55);
+  --scrollbar-track: transparent;
+}
+
+html {
+  background-color: var(--content-bg);
+  color: var(--content-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 滚动条美化 —— Webkit 内核 */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.2s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--scrollbar-thumb-active);
+}
+
+*::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}

@@ -1,0 +1,20 @@
+{
+  "main": "index.html",
+  "logo": "logo.png",
+  "preload": "preload.js",
+  "pluginName": "Plugin Forge",
+  "description": "Plugin Forge 多平台插件开发模板：一套 Web 内核，四种形态交付。",
+  "author": "miaoaa",
+  "version": "0.1.0",
+  "pluginSetting": {
+    "single": true,
+    "height": 800
+  },
+  "features": [
+    {
+      "code": "plugin-forge",
+      "explain": "Plugin Forge：多平台插件开发模板",
+      "cmds": ["plugin-forge", "forge", "插件模板", "plugin"]
+    }
+  ]
+}

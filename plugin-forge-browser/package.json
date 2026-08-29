@@ -1,0 +1,12 @@
+{
+  "name": "plugin-forge-browser",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plugin Forge 浏览器插件：点击图标在新标签页打开多平台插件内核",
+  "scripts": {
+    "package": "node scripts/package.js"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.5.16"
+  }
+}
