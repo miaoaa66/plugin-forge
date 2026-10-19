@@ -2,6 +2,12 @@
 
 一套 Web 内核、四种形态交付的**多平台插件开发模板**。用它快速搭建自己的插件项目，一次开发，同时产出 Web 应用、浏览器插件、VSCode 插件与 uTools 插件。
 
+此框架实践项目：
+- [https://gitee.com/miaoaa66/miaoaa-tools](https://gitee.com/miaoaa66/miaoaa-tools)   
+- [https://github.com/miaoaa66/miaoaa-tools](https://github.com/miaoaa66/miaoaa-tools)   
+
+
+
 > 模板内置三个页面作为示例骨架：首页、关于、变量格式转换。开发者可参照 `变量格式转换` 页扩充自己的工具。
 
 ## 四种形态
