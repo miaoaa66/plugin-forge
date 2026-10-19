@@ -9,7 +9,7 @@
 | Web 应用 | `plugin-forge/` | 浏览器 | `dist/`（静态文件） | 直接访问 / 部署到静态托管 |
 | 浏览器插件 | `plugin-forge-browser/` | Chrome / Edge（MV3） | `dist/` + `.zip` | `chrome://extensions` 加载已解压 |
 | VSCode 插件 | `plugin-forge-vscode/` | VSCode ≥ 1.85 | `.vsix` | 扩展面板「从 VSIX 安装」 |
-| uTools 插件 | `plugin-forge-utools/` | uTools ≥ 5.0 | `dist/` → `.upxs` | 开发者工具打包后安装 |
+| uTools 插件 | `plugin-forge-utools/` | uTools ≥ 5.0.0 | `dist/` → `.upxs` | 开发者工具打包后安装 |
 
 ## 技术栈
 

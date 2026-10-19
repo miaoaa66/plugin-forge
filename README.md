@@ -11,7 +11,7 @@
 | Web 应用 | `plugin-forge/` | 浏览器 | `dist/`（静态文件） |
 | 浏览器插件 | `plugin-forge-browser/` | Chrome / Edge（MV3） | `dist/` + `.zip` |
 | VSCode 插件 | `plugin-forge-vscode/` | VSCode ≥ 1.85 | `.vsix` |
-| uTools 插件 | `plugin-forge-utools/` | uTools ≥ 5.0 | `.upxs` |
+| uTools 插件 | `plugin-forge-utools/` | uTools ≥ 5.0.0 | `.upxs` |
 
 所有形态共享同一份 Web 内核，本地运行、数据不上传。
 
@@ -33,8 +33,7 @@ plugin-forge/
 ### 环境要求
 
 - Node.js ≥ 22.18.0 或 ≥ 24.12.0
-
-我本地使用的26.7.0没有发现问题
+- 推荐 Node.js 26.7.0（我本地使用此版本，未发现问题）
 
 ### Web 应用
 
@@ -73,7 +72,7 @@ npm install
 npm run package   # 构建 web 并组装 dist/（不再产 .upx）
 ```
 
-产物为 `plugin-forge-utools/dist/`（核心交付物）。**uTools v5.0+ 安装包已升级为 `.upxs`（加密 + 开发者签名）**，需用「uTools 开发者工具」导入 `dist/plugin.json`，点「打包 UPXS」生成 `.upxs`，再长按 `.upxs` 右键 → 超级面板「安装插件应用」。
+产物为 `plugin-forge-utools/dist/`（核心交付物）。**uTools v5.0.0 起将安装包格式升级为 `.upxs`（加密 + 开发者信息签名）**，任何普通 zip 工具改名的 `.upx` 在 v5.0.0 及之后版本均**不会被识别为插件安装包**。`.upxs` 需用「uTools 开发者工具」导入 `dist/plugin.json`，点「打包 UPXS」生成。安装方式任选其一：① 在文件资源管理器中左键单击选中 `.upxs`，按**鼠标中键**（默认触发键，未修改设置时）呼出超级面板 → 「安装插件应用」（超级面板已关闭则用方式②）；② 复制 `.upxs`，按 `Alt + Space`（默认快捷键，未修改设置时）呼出搜索框，粘贴 → 「安装插件应用」。
 
 ## 文档
 
@@ -91,7 +90,7 @@ npm run docs:build     # 构建静态站点（产物 docs/.vitepress/dist/）
 - **Web 内核**：Vue 3.5 / Vite 8 / Pinia / Element Plus / Vue Router
 - **浏览器插件**：Chromium MV3（manifest v3 + service worker）
 - **VSCode 插件**：TypeScript + esbuild（扩展端）/ @vscode/vsce（打包）
-- **uTools 插件**：plugin.json（uTools 清单）+ uTools 开发者工具（v5.0+ 打包为加密签名的 `.upxs`，无 CLI/SDK）
+- **uTools 插件**：plugin.json（uTools 清单）+ uTools 开发者工具（v5.0.0+ 打包为加密签名的 `.upxs`；官方未提供命令行打包工具）
 
 ## ⚠️ 仓库说明
 本项目**主仓库位于 Gitee**，GitHub 为自动单向同步的只读镜像。
